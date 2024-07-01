@@ -48,6 +48,12 @@ ubuntu操作系统下
     
     sudo cp com.microsoft.z3.jar /usr/local/lib
 
+将libz3.so移动到/usr/lib/x86_64-linux-gnu 
+
+    sudo cp libz3.so /usr/lib/x86_64-linux-gnu 
+
+    /usr/lib/x86_64-linux-gnu/libz3.so
+
 将libz3java.so移动到/usr/lib/x86_64-linux-gnu         
     
     sudo cp libz3java.so /usr/lib/x86_64-linux-gnu 
@@ -57,10 +63,12 @@ ubuntu操作系统下
 make之前先执行
 
     java -Djava.library.path="/usr/lib/x86_64-linux-gnu/libz3java.so"
+    java -Djava.library.path="/usr/lib/x86_64-linux-gnu/libz3.so"
 
 或自行编译z3，添加z3环境变量并执行以上操作
 
     https://github.com/Z3Prover/z3
+
 
 ![image1](https://github.com/tianxinghe/static-checker/assets/26410605/04cd66ca-41cb-4e0d-a45d-8dcd8257b3dd)
 
